@@ -42,7 +42,7 @@ def tcp_send(server_host, server_port):
         # Feel free to upgrade this code to handle a higher number of lines, too.
         lines_bytes = num_lines.to_bytes(4, "big")
         for i in range(4):
-            tcp_socket.sendall(lines_bytes[i : i + 1])
+            tcp_socket.sendall(lines_bytes[i: i + 1])
             time.sleep(0.25)  # Just to mess with your servers. :-)
 
         # Enter the lines of the message. Each line will be sent as it is entered.
